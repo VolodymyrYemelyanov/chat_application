@@ -1,3 +1,9 @@
+To start this application you should run two commands from the root folder:
+'node server.js'
+'npm start' or 'yarn start'
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
