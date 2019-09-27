@@ -1,0 +1,14 @@
+.headerContainer {
+    position: fixed;
+    max-width: 70%;
+    width: 100%;
+    background-color: #00003f;
+    box-shadow: 0 6px 7px 0 rgba(0, 0, 0, .15);
+    z-index: 100;
+}
+
+.titleHeader {
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #fff;
+}

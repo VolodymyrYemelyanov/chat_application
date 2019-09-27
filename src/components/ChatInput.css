@@ -1,0 +1,41 @@
+.formStyle {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    width: 65%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, .15);
+    transition: all .3s;
+}
+
+.formStyle:hover {
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, .25);
+    transform: translate(-50%, -1px);
+}
+
+.formStyle:focus-within,
+.formStyle:active {
+    outline: none;
+    /* border: 1px solid; */
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, .22);
+    transform: translate(-50%, 0);
+}
+
+.inputStyle {
+    display: block;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 16px;
+    border: none;
+}
+
+.inputStyle:focus {
+    outline: none;
+    /* border: 1px solid; */
+}
+
+.inputNone {
+    display: none;
+}

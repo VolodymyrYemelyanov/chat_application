@@ -1,12 +1,11 @@
 import React from 'react';
+import './ChatMessage.css';
 
 export default ({ name, message }) => {
   return (
     <div>
-      <span>
-        <strong>{name}</strong>
-      </span>
-      <p>
+      <p className='chatText'>
+        <span className='userName'>{name}</span>
         <em>{message}</em>
       </p>
     </div>

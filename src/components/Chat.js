@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChatInput from './ChatInput';
 import ChatMessage from './ChatMessage';
+import './Chat.css';
 
 const URL = 'ws://localhost:3030';
 
@@ -47,33 +48,13 @@ class Chat extends Component {
   };
 
   render() {
-    const styles = {
-      mainStyle: {
-        height: '100%',
-        width: '100%',
-        display: 'flex',
-        overflow: 'hidden',
-        alignItems: 'center',
-        paddingTop: 65
-      },
-      messagesContainer: {
-        width: '100%',
-        height: '100%',
-        overflowX: 'scroll',
-        paddingTop: 25,
-        paddingBottom: 360,
-        display: 'flex',
-        flexDirection: 'column-reverse'
-      }
-    };
-
     return (
-      <main style={styles.mainStyle}>
+      <main className='mainStyle'>
         <ChatInput
           ws={this.ws}
           onSubmitMessage={messageString => this.SubmitMessage(messageString)}
         />
-        <div style={styles.messagesContainer}>
+        <div className='messagesContainer'>
           {this.state.messages.map((message, index) => {
             return (
               <ChatMessage
@@ -85,9 +66,10 @@ class Chat extends Component {
           })}
         </div>
 
-        <label htmlFor='name'>
+        <label className='nameLabel' htmlFor='name'>
           Name:&nbsp;
           <input
+            className='nameInput'
             type='text'
             id={'name'}
             placeholder={'Enter your name...'}

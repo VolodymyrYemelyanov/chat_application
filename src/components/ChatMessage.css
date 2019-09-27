@@ -1,0 +1,15 @@
+.chatText {
+    padding: 5px 15px;
+    margin: 5px 3.6%;
+    background-color: #dcdcdc;
+    max-width: 65%;
+    min-width: 10%;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.userName {
+    display: block;
+    color: #808080;
+    font-size: 12px;
+}

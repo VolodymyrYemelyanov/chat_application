@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './ChatInput.css';
 
 class ChatInput extends Component {
   static propTypes = {
@@ -10,32 +11,9 @@ class ChatInput extends Component {
   };
 
   render() {
-    const styles = {
-      formStyle: {
-        position: 'fixed',
-        display: 'flex',
-        justifyContent: 'center',
-        bottom: 20,
-        width: '65%',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        boxShadow: '0 7px 10px 0 rgba(0, 0, 0, .15)'
-      },
-      inputStyle: {
-        display: 'block',
-        width: '100%',
-        padding: '20px 10px',
-        fontSize: '16px',
-        border: 'none'
-      },
-      inputNone: {
-        display: 'none'
-      }
-    };
-
     return (
       <form
-        style={styles.formStyle}
+        className='formStyle'
         action='.'
         onSubmit={e => {
           e.preventDefault();
@@ -44,13 +22,13 @@ class ChatInput extends Component {
         }}
       >
         <input
-          style={styles.inputStyle}
+          className='inputStyle'
           type='text'
           placeholder={'Enter message...'}
           value={this.state.message}
           onChange={e => this.setState({ message: e.target.value })}
         />
-        <input style={styles.inputNone} type='submit' value={'Send'} />
+        <input className='inputNone' type='submit' value={'Send'} />
       </form>
     );
   }
